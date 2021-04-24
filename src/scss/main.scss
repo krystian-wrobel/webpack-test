@@ -1,13 +1,155 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.body {
+  background: #615f5b;
+  background: linear-gradient(
+    90deg,
+    #615f5b 28%,
+    #d18b13 56%,
+    rgba(97, 66, 11, 0.983929) 95%
+  )
+}
+
+.header {
+  background: white;
+}
+
+.hamburger {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+
+.navigation {
+  padding: 16px;
+  border-radius: 8px;
+  display: none;
+  &__link {
+    color: #0b2b07;
+    display: block;
+    margin-right: 20px;
+  }
+  &--homepage {
+    color: black;
+  }
+  &--open {
+    display: block;
+  }
+  &:hover {
+    color: #0e168a;
+  }
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  &__heading {
+    color: #331625;
+  }
+}
+.about {
+  &__heading {
+    color: purple;
+  }
+  &__link {
+    color: cornflowerblue;
+  }
+  &__picture {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.notes__heading {
+  color: red;
+}
+
+.article {
+  padding: 16px;
+  border: 1px #ccc solid;
+  margin-bottom: 16px;
+  &__title {
+    color: #21a179;
+  }
+  &__description {
+    color: #141212;
+  }
+  &--special {
+    color: orchid;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: tomato;
+    border-radius: 50%;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: tomato;
+    border-radius: 50%;
+  }
+}
+
+.marker {
+  padding: 16px;
+  border: 1px #ccc solid;
+  margin-bottom: 16px;
+}
+
+.footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  &r__list {
+    list-style: square;
+  }
+}
+
+.table {
+  width: 100%;
+}
+
+
+@media (min-width: 667px) {
+  .navigation {
+    background: seagreen;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    &__link {
+      color: blanchedalmond;
+      display: block;
+      margin-right: 20px;
+    }
+  }
+
+  .header {
+    background: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
 }

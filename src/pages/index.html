@@ -1,153 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
+    <title>Krystian Wróbel</title>
+    <link rel="normalize" href="normalize.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css"/>
 
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
   </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+
+  <body class="body">
+    <header class="header">
+      <nav class="navigation navigation--js navigation--open">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Główna</a
+        >
+        <a class="navigation__link" href="grafik-zajec.html">Grafik</a>
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Główna</a
+        >
+        <a class="navigation__link" href="grafik-zajec.html">Grafik</a>
+      </nav>
+      <button class="hamburger hamburger--js">Menu</button>
+    </header>
+    <main class="main">
+      <header class="main__header">
+        <h1 class="main__heading main__heading--js">Krystian Wróbel</h1>
+        <p>Od początku dnia minęło: <span class="time--js"></span></p>
+        <button class="action--js">zmień nagłówek</button>
+      </header>
+      <section class="about"></section>
+        <h2 class="about__heading">Kim jestem?</h2>
+        <p class="test">No właśnie, <span class="test__special">kim?</span></p>
+
+        <img class="about__picture" src="../assets/img/krystian.jpg" />
+        <p class="about__description">
+          Na codzień uczę dzieci i dorosłych pływać
+          <a class="about__link" href="#CzyTrudno">Czy trudno</a> w szkółce
+          pływackiej
+          <a class="about__link" href="https://wrobelsport.pl">Wróbel Sport.</a
+          ><br />
+          Pracuję na basenie w Piotrkowie Trybunalskim. Jestem również
+          ratownikiem oraz instruktorem ratownictrwa wodnego. <br />W wolnym
+          czasie wspinam się, chodzę po slacku i fotografuję.
+        </p>
+      </section>
+      <section class="notes">
+        <h2 class="notes__heading">
+          Notatki instruktora pływania.
+        </h2>
+        <div class="grid">
+        <article class="article">
+          <h3 class="article__title article__title--js">
+            Czy trudno jest zostać instruktorem pływania?
+          </h3>
+          <p class="article__description article__description--js">
+            Teoretycznie rzecz biorąc, to łatwo, bo wystarczy zrobić kurs
+            instruktora i gotowe. W praktyce to jednak za mało. Dobrze, jeśli
+            mamy kogoś kto nam pomoże i wprowdzi w ten zawód. Znam instruktorów
+            po kursach, którzy pracują wiele lat a i tak czegoś im brakuje. Jest
+            też odwrotnie i takich też znam, że są wspaniałymi instruktorami
+            mimo braku odpowiedniego kursu.
+          </p>
+        </article>
+
+        <article class="article">
+          <h3 class="article__title">Czy trudno jest kogoś nauczyć pływać?</h3>
+          <p class="article__description">
+            Pytanie jest dość trudne, gdyż to zależy od wielu czynników.
+            Najłatwiej i najszybciej uczą się dzieci, które się nie boją wody i
+            chcą się nauczyć pływać. ajtrudniej zaś soby dorosłe, które w
+            dodatku mają lęk przed wodą. Na początku wydawało mi się, że uczenie
+            kogoś pływania to prosta rzecz. Teraz dopiero wiem jak bardzo się
+            myliłem. Łatwo zdobyć wiedzę jak prawidłowo powinno się pływać i w
+            jaki sposób uczyć, ale najtrudniejsze jest wychwycić błędy i je
+            skorygować. Często uczeń robi wszystko poprawnie, a i tak coś się
+            nie udaje i to jest ten moment kiedy dobry instruktor wychwyci to i
+            poprawi.
+          </p>
+        </article>
+        </div>
+
+        <section class="marker">
+          <h4>Lista fajnych znaczników</h4>
+          <ul class="marker__list">
+            <li>ul</li>
+            <li>ol</li>
+            <li>section</li>
+          </ul>
+        </section>
+        <section>
+          <h5>Grafik zajęć</h5>
+          <table class="table">
+            <caption>
+              Grafik prowadzenia zajęć na baesenie przy ul. Belzackiej
+            </caption>
+            <thead>
+              <tr>
+                <th>Godzina</th>
+                <th>Poniedziałek</th>
+                <th>Wtorek</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>14:00 - 14:45</td>
+                <td>Ania</td>
+                <td>Michał</td>
+              </tr>
+              <td>14:45 - 15:30</td>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      Strona domowa Krystiana Wróbla. Wszystkie treści są wynikiem mojej
+      wieloletniej pracy jako instruktor pływania.
+      <a class="footer__link" href="#top">Wróć na górę</a>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
