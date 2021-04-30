@@ -1,5 +1,5 @@
 @import "~normalize.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Raleway&display=swap');
 @import "_variables";
 
 
@@ -21,6 +21,8 @@ html {
     #d18b13 56%,
     rgba(97, 66, 11, 0.983929) 95%
   )
+
+
 }
 
 .header {
@@ -59,6 +61,7 @@ html {
   &__heading {
     color: #331625;
   }
+  font-family: 'Antonio', sans-serif;
 }
 .about {
   &__heading {
