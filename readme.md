@@ -1,4 +1,4 @@
-![cover](.//gh/cover.png)
+![cover](./gh/cover.png)
 
 # Homepage Krystiana
 
