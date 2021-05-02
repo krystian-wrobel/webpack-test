@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![cover](./gh/cover.png)
+=======
+![cover](./gh/Cover.png)
+>>>>>>> a4dbeeed7347a649ac87af0dd709b1cb1c852cb1
 
 # Homepage Krystiana
 
