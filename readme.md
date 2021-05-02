@@ -1,6 +1,6 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](.//cover.png)
 
-# Homepage Krystiana 
+# Homepage Krystiana
 
 My first website.
 
