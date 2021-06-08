@@ -30,3 +30,12 @@ const startOfDay = moment().startOf('day').fromNow();
 const timePlaceholder = document.querySelector('.time--js');
 
 timePlaceholder.innerHTML = startOfDay;
+
+document.cookie = "name = krystian"
+
+document.cookie = "test = ciasteczek"
+
+console.log(localStorage.getItem('human'));
+
+
+localStorage.setItem('human','krystian')
